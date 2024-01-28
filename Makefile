@@ -1,14 +1,15 @@
-Install:
+Install: # установка зависимостей
 	poetry install
 
-brain-games:
+brain-games: # запуск программы
 	poetry run brain-games
 
-build:
+build: # сборка пакета
 	poetry build
 
-publish:
+publish: # публикация пакета на pypi
 	poetry publish --dry-run
 
-package-install:
+package-install: # установка пакета из dist 
 	python3 -m pip install --user dist/*.whl
+	
