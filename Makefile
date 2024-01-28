@@ -12,4 +12,6 @@ publish: # публикация пакета на pypi
 
 package-install: # установка пакета из dist 
 	python3 -m pip install --user dist/*.whl
-	
+
+lint: # проверка кода на ошибки
+	poetry run flake8 brain_games
