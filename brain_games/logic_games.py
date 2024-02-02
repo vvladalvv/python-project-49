@@ -2,6 +2,7 @@ from brain_games.games.even import game_even
 from brain_games.games.calc import game_calc
 from brain_games.cli import welcome_name
 from brain_games.games.gcd import game_gcd
+from brain_games.games.progression import game_progression
 
 
 
@@ -25,3 +26,4 @@ def logic(game_name):
 #logic(game_calc)
 #logic(game_even)  
 #logic(game_gcd)
+#logic(game_progression)
