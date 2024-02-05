@@ -4,7 +4,7 @@ def game_gcd():
     num_1 = randint(1, 20)
     num_2 = randint(1, 60)
     gcd = math.gcd(num_1, num_2)
-    print(gcd)
+    #print(gcd)
     try:
         answer = int(input(f"Question: {num_1} {num_2}\nYour answer: "))
     except ValueError:
