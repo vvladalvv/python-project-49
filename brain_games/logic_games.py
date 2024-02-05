@@ -3,12 +3,11 @@ from brain_games.games.calc import game_calc
 from brain_games.cli import welcome_name
 from brain_games.games.gcd import game_gcd
 from brain_games.games.progression import game_progression
-
+from brain_games.games.prime import game_prime
 
 
 def logic(game_name):
     name = welcome_name()
-    #print(target)
     round_game = 3
     counter = 0
     while counter != round_game:
@@ -27,3 +26,4 @@ def logic(game_name):
 #logic(game_even)  
 #logic(game_gcd)
 #logic(game_progression)
+#logic(game_prime)
