@@ -1,5 +1,4 @@
 from random import randint
-#target = "Answer 'yes' if the number is even, otherwise answer 'no'."
 
 
 def game_even():
@@ -10,7 +9,6 @@ def game_even():
     answer = input('Your answer: '.lower())
     if number % 2 == 0 and answer == 'yes' or number % 2 != 0 and answer == 'no':
         return 'Correct!'
-        #return True
     else:
             if answer == 'yes':
                 print(f"'{answer}' is wrong answer ;(. Correct answer was 'no'.\nLet's try again")
