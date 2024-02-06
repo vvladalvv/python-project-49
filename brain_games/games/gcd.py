@@ -1,7 +1,7 @@
 from random import randint
 import math
-from brain_games.variables import incorrect_answer, error_enter_number
-exercise_gcd = 'Find the greatest common divisor of given numbers.'
+from brain_games.constants import INCORRECT_ANSWER, ERROR_ENTER_NUMBER
+EXERCISE_GCD = 'Find the greatest common divisor of given numbers.'
 
 
 def game_gcd():
@@ -12,12 +12,12 @@ def game_gcd():
     try:
         answer = int(input(f"Question: {num_1} {num_2}\nYour answer: "))
     except ValueError:
-        print(error_enter_number)
+        print(ERROR_ENTER_NUMBER)
         return False
     if answer == gcd:
         return True
     else:
-        print(f"'{answer}' {incorrect_answer} '{gcd}'")
+        print(f"'{answer}' {INCORRECT_ANSWER} '{gcd}'")
         return False
 
 

@@ -1,10 +1,10 @@
 from brain_games.cli import welcome_name
-from brain_games.variables import message_repeat, congratulations
-# from brain_games.games.gcd import game_gcd, exercise_gcd
-# from brain_games.games.progression import game_progression, exercise_progress
-# from brain_games.games.prime import game_prime, exercise_prime
-# from brain_games.games.calc import game_calc, exercise_calc
-# from brain_games.games.even import game_even, exercise_even
+from brain_games.constants import MESSAGE_REPEAT, CONGRATULATIONS
+# from brain_games.games.gcd import game_gcd, EXERCISE_GCD
+# from brain_games.games.progression import game_progression, EXERCISE_PROGRESS
+# from brain_games.games.prime import game_prime, EXERCISE_PRIME
+# from brain_games.games.calc import game_calc, EXERCISE_CALC
+# from brain_games.games.even import game_even, EXERCISE_EVEN
 
 
 def logic(game_name, exercise):
@@ -19,12 +19,12 @@ def logic(game_name, exercise):
             counter += 1
         else:
             counter = 0
-            print(f"{message_repeat} {name}")
-    return print(f"{congratulations}, {name}")
+            print(f"{MESSAGE_REPEAT} {name}")
+    return print(f"{CONGRATULATIONS}, {name}")
 
 
-# logic(game_calc)
-# logic(game_even)
-# logic(game_gcd)
-# logic(game_progression, exercise_progression)
-# logic(game_prime)
+# logic(game_calc, EXERCISE_CALC)
+# logic(game_even, EXERCISE_EVEN)
+# logic(game_gcd, EXERCISE_GCD)
+# logic(game_progression, EXERCISE_PROGRESS)
+# logic(game_prime, EXERCISE_PRIME)
