@@ -6,11 +6,8 @@ def welcome_name():
     name = string("May I have your name? ")
     print("Hello, " + name + "!")
     return name
-    
 
 
 def welcome_user():
     name = string("May I have your name? ")
     return print("Hello, " + name + "!")
-
-#welcome_name()

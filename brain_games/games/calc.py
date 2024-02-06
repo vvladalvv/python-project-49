@@ -1,4 +1,7 @@
 from random import choice, randint
+from brain_games.variables import incorrect_answer, error_enter_number
+exercise_calc = 'What is the result of the expression?'
+
 
 def game_calc():
     operator = ['+', '-', '*']
@@ -7,24 +10,20 @@ def game_calc():
     num_2 = randint(10, 15)
     question = f"Question: {num_2} {choice_operator} {num_1}"
     result = eval(f"{num_2} {choice_operator} {num_1}")
-    print('What is the result of the expression?')
     print(question)
     try:
-         answer = int(input("Your answer: "))
+        answer = int(input("Your answer: "))
     except ValueError:
-        print('Please, enter a number')
+        print(error_enter_number)
         return False
-    if answer == str(answer):
-        print('Please, enter a number')
-        return False
-    elif answer == num_2 + num_1 and choice_operator == '+':
-          return 'Correct!'
+    if answer == num_2 + num_1 and choice_operator == '+':
+        return True
     elif answer == num_2 * num_1 and choice_operator == '*':
-          return 'Correct!'
+        return True
     elif answer == num_2 - num_1 and choice_operator == '-':
-          return 'Correct!'
+        return True
     else:
-        print(f'{answer} Wrong answer! Correct answer is {result}')
+        print(f'{answer} {incorrect_answer} {result}')
         return False
 
-#game_calc()
+# game_calc()
