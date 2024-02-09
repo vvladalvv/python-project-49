@@ -4,13 +4,13 @@ EXERCISE_PROGRESS = "What number is missing in the progression?"
 
 
 def game_progression():
-    num_1 = randint(1, 10)
+    random_num = randint(1, 10)
     step = randint(1, 8)
     long_progression = randint(5, 15)
     progression = []
     for i in range(long_progression):
         num_1 += step
-        progression.append(num_1)
+        progression.append(random_num)
     random_num_in_progression = choice(progression)
     index = progression.index(random_num_in_progression)
     progression[index] = '...'
