@@ -15,15 +15,15 @@ def game_even():
     result = check_even(random_number)
     print(f"Question: {random_number}")
     answer = input('Your answer: ').lower()
-    if result is True and answer == ANSWER_YES:
+    if result is True and answer == 'yes':
         return True
-    elif result is not True and answer == ANSWER_NO:
+    elif result is not True and answer == 'no':
         return True
     else:
-        if answer == ANSWER_YES:
-            print(f"'{answer}' {INCORRECT_ANSWER} '{ANSWER_NO}'")
+        if answer == 'yes':
+            print(f"'{answer}' is wrong answer ;(. Correct answer was 'no'")
         else:
-            print(f"'{answer}' {INCORRECT_ANSWER} '{ANSWER_YES}'")
+            print(f"'{answer}' is wrong answer ;(. Correct answer was 'yes'")
         return False
     
     #if random_number % 2 == 0 and answer == ANSWER_YES:
