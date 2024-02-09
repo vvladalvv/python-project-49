@@ -4,7 +4,7 @@ from brain_games.constants import MESSAGE_REPEAT, CONGRATULATIONS
 # from brain_games.games.progression import game_progression, EXERCISE_PROGRESS
 # from brain_games.games.prime import game_prime, EXERCISE_PRIME
 # from brain_games.games.calc import game_calc, EXERCISE_CALC
-from brain_games.games.even import game_even, EXERCISE_EVEN
+# from brain_games.games.even import game_even, EXERCISE_EVEN
 
 
 def logic(game_name, exercise):
@@ -24,7 +24,7 @@ def logic(game_name, exercise):
 
 
 # logic(game_calc, EXERCISE_CALC)
-logic(game_even, EXERCISE_EVEN)
+# logic(game_even, EXERCISE_EVEN)
 # logic(game_gcd, EXERCISE_GCD)
 # logic(game_progression, EXERCISE_PROGRESS)
 # logic(game_prime, EXERCISE_PRIME)
