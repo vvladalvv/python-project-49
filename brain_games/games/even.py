@@ -6,8 +6,7 @@ EXERCISE_EVEN = "Answer 'yes' if the number is even, otherwise answer 'no'."
 
 def game_even():
     random_number = randint(1, 101)
-    print(f"Question: {random_number}")
-    answer = input('Your answer: ').lower()
+    answer = input(f"Question: {random_number}\nYour answer: ").lower()
     if random_number % 2 == 0 and answer == ANSWER_YES:
         return True
     elif random_number % 2 != 0 and answer == ANSWER_NO:

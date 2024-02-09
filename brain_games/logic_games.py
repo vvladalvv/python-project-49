@@ -19,8 +19,8 @@ def logic(game_name, exercise):
             counter += 1
         else:
             counter = 0
-            print(f"{MESSAGE_REPEAT} {name} !")
-    return print(f"{CONGRATULATIONS}, {name} !")
+            print(f"{MESSAGE_REPEAT}, {name}!")
+    return print(f"{CONGRATULATIONS}, {name}!")
 
 
 # logic(game_calc, EXERCISE_CALC)

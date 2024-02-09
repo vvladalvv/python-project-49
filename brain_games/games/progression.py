@@ -9,7 +9,7 @@ def game_progression():
     long_progression = randint(5, 15)
     progression = []
     for i in range(long_progression):
-        num_1 += step
+        random_num += step
         progression.append(random_num)
     random_num_in_progression = choice(progression)
     index = progression.index(random_num_in_progression)

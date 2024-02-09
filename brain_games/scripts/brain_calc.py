@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from brain_games.logic_games import logic
 from brain_games.games.calc import game_calc, EXERCISE_CALC
 
