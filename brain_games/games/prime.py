@@ -16,7 +16,8 @@ def check_prime(num):
 def game_prime():
     random_number = randint(1, 102)
     result = check_prime(random_number)
-    answer = input(f'Question: {random_number}\nYour answer: ').lower()
+    print(f'Question: {random_number}')
+    answer = input('Your answer: ').lower()
     if result is True and answer == ANSWER_YES:
         return True
     elif result is not True and answer == ANSWER_NO:
