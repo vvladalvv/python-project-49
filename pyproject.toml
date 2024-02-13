@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "this project presents 5 games to warm up your brain"
 authors = ["Vlad A. <Centr575@yandex.ru>"]
 readme = "README.md"
 packages = [
