@@ -1,25 +1,29 @@
 from random import choice, randint
-from brain_games.constants import INCORRECT_ANSWER, ERROR_ENTER_NUMBER
-EXERCISE_CALC = 'What is the result of the expression?'
+from prompt import integer
+DESCRIPTION_CALC = 'What is the result of the expression?'
+OPERATOR = ('+', '-', '*')
+LOWER_LIMIT = 1
+UPPER_LIMIT = 15
 
 
-def game_calc():
-    operator = ['+', '-', '*']
-    choice_operator = choice(operator)
-    random_num_1 = randint(1, 10)
-    random_num_2 = randint(10, 15)
+def give_an_example():
+    choice_operator = choice(OPERATOR)
+    random_num_1 = randint(LOWER_LIMIT, UPPER_LIMIT)
+    random_num_2 = randint(LOWER_LIMIT, UPPER_LIMIT)
     question = f"Question: {random_num_2} {choice_operator} {random_num_1}"
-    result = eval(f"{random_num_2} {choice_operator} {random_num_1}")
     print(question)
-    try:
-        answer = int(input("Your answer: "))
-    except ValueError:
-        print(ERROR_ENTER_NUMBER)
-        return False
-    if answer == result:
-        return True
-    else:
-        print(f'{answer} {INCORRECT_ANSWER} {result}')
-        return False
+    if choice_operator == '-':
+        result = random_num_2 - random_num_1
+    if choice_operator == '+':
+        result = random_num_2 + random_num_1
+    if choice_operator == '*':
+        result = random_num_2 * random_num_1
+    return result
+
+
+def get_question_and_answer():
+    correct_result = give_an_example()
+    answer_user = integer("Your answer: ")
+    return correct_result, answer_user
 
 # game_calc()

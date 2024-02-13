@@ -1,30 +1,45 @@
-from brain_games.cli import welcome_name
-from brain_games.constants import MESSAGE_REPEAT, CONGRATULATIONS
-# from brain_games.games.gcd import game_gcd, EXERCISE_GCD
-# from brain_games.games.progression import game_progression, EXERCISE_PROGRESS
-# from brain_games.games.prime import game_prime, EXERCISE_PRIME
-# from brain_games.games.calc import game_calc, EXERCISE_CALC
-# from brain_games.games.even import game_even, EXERCISE_EVEN
+from brain_games.cli import welcome_user
+# from brain_games.games.gcd import find_gcd, DESCRIPTION_GCD
+# from brain_games.games.progression import find_progression, DESCRIPTION_PROGRESS
+# from brain_games.games.prime import find_prime_number, DESCRIPTION_PRIME
+# from brain_games.games.calc import get_question_and_answer, DESCRIPTION_CALC
+# from brain_games.games.even import find_even_number, DESCRIPTION_EVEN
 
 
-def logic(game_name, exercise):
-    name = welcome_name()
+INCORRECT_ANSWER = 'is wrong answer ;(. Correct answer was'
+MESSAGE_REPEAT = "let's try again,"
+CONGRATULATIONS = "Congratulations"
+
+
+def check_answer(correct_answer, user_answer):
+    if user_answer == correct_answer:
+        return user_answer
+    else:
+        return correct_answer
+
+
+def run_game(game_name, description):
+    name = welcome_user()
     round_game = 3
-    counter = 0
-    print(exercise)
-    while counter != round_game:
+    counter_correct = 1
+    correct_round = 0
+    print(description)
+    while correct_round != round_game:
         result_func = game_name()
-        if result_func is True:
+        correct_answer, user_answer = result_func
+        check_answer(correct_answer, user_answer)
+        if user_answer == correct_answer:
             print("Correct!")
-            counter += 1
+            correct_round += counter_correct
         else:
-            counter = 0
+            correct_round = 0
+            print(f"'{user_answer}' {INCORRECT_ANSWER}, '{correct_answer}'")
             print(f"{MESSAGE_REPEAT}, {name}!")
     return print(f"{CONGRATULATIONS}, {name}!")
 
 
-# logic(game_calc, EXERCISE_CALC)
-# logic(game_even, EXERCISE_EVEN)
-# logic(game_gcd, EXERCISE_GCD)
-# logic(game_progression, EXERCISE_PROGRESS)
-# logic(game_prime, EXERCISE_PRIME)
+# run_game(get_question_and_answer, DESCRIPTION_CALC)
+# run_game(find_even_number, DESCRIPTION_EVEN)
+# run_game(find_gcd, DESCRIPTION_GCD)
+# run_game(find_progression, DESCRIPTION_PROGRESS)
+# run_game(find_prime_number, DESCRIPTION_PRIME)

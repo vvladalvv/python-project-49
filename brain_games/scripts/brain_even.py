@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-from brain_games.logic_games import logic
-from brain_games.games.even import game_even, EXERCISE_EVEN
+from brain_games.logic_games import run_game
+from brain_games.games.even import find_even_number, DESCRIPTION_EVEN
 
 
 def main():
-    logic(game_even, EXERCISE_EVEN)
+    run_game(find_even_number, DESCRIPTION_EVEN)
 
 
 if __name__ == '__main__':

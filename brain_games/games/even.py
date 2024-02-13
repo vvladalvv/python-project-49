@@ -1,22 +1,19 @@
 from random import randint
-from brain_games.constants import INCORRECT_ANSWER
-from brain_games.constants import ANSWER_YES, ANSWER_NO
-EXERCISE_EVEN = "Answer 'yes' if the number is even, otherwise answer 'no'."
+from prompt import string
+DESCRIPTION_EVEN = "Answer 'yes' if the number is even, otherwise answer 'no'."
+ANSWER_YES = 'YES'.lower()
+ANSWER_NO = 'NO'.lower()
+LOWER_LIMIT = 1
+UPPER_LIMIT = 101
 
 
-def game_even():
-    random_number = randint(1, 101)
-    answer = input(f"Question: {random_number}\nYour answer: ").lower()
-    if random_number % 2 == 0 and answer == ANSWER_YES:
-        return True
-    elif random_number % 2 != 0 and answer == ANSWER_NO:
-        return True
+def find_even_number():
+    random_number = randint(LOWER_LIMIT, UPPER_LIMIT)
+    answer_user = string(f"Question: {random_number}\nYour answer: ").lower()
+    if random_number % 2 == 0:
+        correct_answer = ANSWER_YES
     else:
-        if answer == ANSWER_YES:
-            print(f"'{answer}' {INCORRECT_ANSWER} '{ANSWER_NO}'")
-        else:
-            print(f"'{answer}' {INCORRECT_ANSWER} '{ANSWER_YES}'")
-        return False
-
+        correct_answer = ANSWER_NO
+    return correct_answer, answer_user
 
 # game_even()

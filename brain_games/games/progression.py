@@ -1,29 +1,27 @@
 from random import choice, randint
-from brain_games.constants import INCORRECT_ANSWER, ERROR_ENTER_NUMBER
-EXERCISE_PROGRESS = "What number is missing in the progression?"
+from prompt import integer
+DESCRIPTION_PROGRESS = "What number is missing in the progression?"
+LOWER_LIMIT = 1
+UPPER_LIMIT = 15
 
 
-def game_progression():
-    random_num = randint(1, 10)
-    step = randint(1, 8)
-    long_progression = randint(5, 15)
+def give_progression(num_1, step, long):
     progression = []
-    for i in range(long_progression):
-        random_num += step
-        progression.append(random_num)
+    for _ in range(long):
+        num_1 += step
+        progression.append(num_1)
+    return progression
+
+
+def find_progression():
+    random_num_1 = randint(LOWER_LIMIT, UPPER_LIMIT)
+    step = randint(LOWER_LIMIT, UPPER_LIMIT)
+    long_progression = randint(LOWER_LIMIT, UPPER_LIMIT)
+    progression = give_progression(random_num_1, step, long_progression)
     random_num_in_progression = choice(progression)
     index = progression.index(random_num_in_progression)
     progression[index] = '...'
-    try:
-        answer = int(input(f"Question: {progression}\nYour answer: "))
-    except ValueError:
-        print(ERROR_ENTER_NUMBER)
-        return False
-    if answer == random_num_in_progression:
-        return True
-    else:
-        print(f"'{answer}' {INCORRECT_ANSWER} '{random_num_in_progression}'")
-        return False
-
+    answer = integer(f"Question: {progression}\nYour answer: ")
+    return random_num_in_progression, answer
 
 # game_progression()

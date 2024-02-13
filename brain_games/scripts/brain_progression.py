@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-from brain_games.logic_games import logic
-from brain_games.games.progression import game_progression, EXERCISE_PROGRESS
+from brain_games.logic_games import run_game
+from brain_games.games.progression import find_progression, DESCRIPTION_PROGRESS
 
 
 def main():
-    logic(game_progression, EXERCISE_PROGRESS)
+    run_game(find_progression, DESCRIPTION_PROGRESS)
 
 
 if __name__ == '__main__':
