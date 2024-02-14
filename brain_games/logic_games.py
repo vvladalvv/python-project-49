@@ -7,7 +7,7 @@ from brain_games.cli import welcome_user
 
 
 INCORRECT_ANSWER = 'is wrong answer ;(. Correct answer was'
-MESSAGE_REPEAT = "let's try again"
+MESSAGE_REPEAT = "Let's try again"
 CONGRATULATIONS = "Congratulations"
 
 
