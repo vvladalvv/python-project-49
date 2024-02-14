@@ -1,6 +1,6 @@
 from random import choice, randint
 from prompt import integer
-DESCRIPTION_CALC = 'What is the result of the expression?'
+DESCRIPTION = 'What is the result of the expression?'
 OPERATOR = ('+', '-', '*')
 LOWER_LIMIT = 1
 UPPER_LIMIT = 15

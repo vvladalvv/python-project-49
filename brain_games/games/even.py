@@ -1,6 +1,6 @@
 from random import randint
 from prompt import string
-DESCRIPTION_EVEN = 'Answer "yes" if the number is even, otherwise answer "no".'
+DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 ANSWER_YES = 'YES'.lower()
 ANSWER_NO = 'NO'.lower()
 LOWER_LIMIT = 1

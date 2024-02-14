@@ -1,6 +1,6 @@
 from random import choice, randint
 from prompt import integer
-DESCRIPTION_PROGRESS = "What number is missing in the progression?"
+DESCRIPTION = "What number is missing in the progression?"
 LOWER_LIMIT = 5
 UPPER_LIMIT = 15
 

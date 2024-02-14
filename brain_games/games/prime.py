@@ -1,6 +1,6 @@
 from random import randint
 from prompt import string
-DESCRIPTION_PRIME = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 ANSWER_YES = 'YES'.lower()
 ANSWER_NO = 'NO'.lower()
 LOWER_LIMIT = 1

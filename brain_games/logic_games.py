@@ -1,9 +1,9 @@
 from brain_games.cli import welcome_user
-# from brain_games.games.gcd import find_gcd, DESCRIPTION_GCD
-# from brain_games.games.progression import find_progression, DESCRIPTION_PROGRESS
-# from brain_games.games.prime import find_prime_number, DESCRIPTION_PRIME
-# from brain_games.games.calc import get_question_and_answer, DESCRIPTION_CALC
-# from brain_games.games.even import find_even_number, DESCRIPTION_EVEN
+# from brain_games.games.gcd import find_gcd, DESCRIPTION
+# from brain_games.games.progression import find_progression, DESCRIPTION
+# from brain_games.games.prime import find_prime_number, DESCRIPTION
+# from brain_games.games.calc import get_question_and_answer, DESCRIPTION
+# from brain_games.games.even import find_even_number, DESCRIPTION
 
 
 INCORRECT_ANSWER = 'is wrong answer ;(. Correct answer was'
@@ -39,8 +39,8 @@ def run_game(game_name, description):
     return print(f"{CONGRATULATIONS}, {name}!")
 
 
-# run_game(get_question_and_answer, DESCRIPTION_CALC)
-# run_game(find_even_number, DESCRIPTION_EVEN)
-# run_game(find_gcd, DESCRIPTION_GCD)
-# run_game(find_progression, DESCRIPTION_PROGRESS)
-# run_game(find_prime_number, DESCRIPTION_PRIME)
+# run_game(get_question_and_answer, DESCRIPTION)
+# run_game(find_even_number, DESCRIPTION)
+# run_game(find_gcd, DESCRIPTION)
+# run_game(find_progression, DESCRIPTION)
+# run_game(find_prime_number, DESCRIPTION)
