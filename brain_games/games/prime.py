@@ -1,5 +1,4 @@
 from random import randint
-from prompt import string
 DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 ANSWER_YES = 'YES'.lower()
 ANSWER_NO = 'NO'.lower()
@@ -19,7 +18,7 @@ def check_prime(num):
 def find_prime_number():
     random_number = randint(LOWER_LIMIT, UPPER_LIMIT)
     correct_result = check_prime(random_number)
-    answer_user = string(f"Question: {random_number}\nYour answer: ").lower()
-    return correct_result, answer_user
+    question = f"{random_number}"
+    return correct_result, question
 
 # game_prime()

@@ -1,5 +1,4 @@
 from random import randint
-from prompt import string
 DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 ANSWER_YES = 'YES'.lower()
 ANSWER_NO = 'NO'.lower()
@@ -9,11 +8,11 @@ UPPER_LIMIT = 101
 
 def find_even_number():
     random_number = randint(LOWER_LIMIT, UPPER_LIMIT)
-    answer_user = string(f"Question: {random_number}\nYour answer: ").lower()
+    question = f"{random_number}"
     if random_number % 2 == 0:
         correct_answer = ANSWER_YES
     else:
         correct_answer = ANSWER_NO
-    return correct_answer, answer_user
+    return correct_answer, question
 
 # game_even()

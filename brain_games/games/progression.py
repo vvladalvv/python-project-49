@@ -1,5 +1,4 @@
 from random import choice, randint
-from prompt import integer
 DESCRIPTION = "What number is missing in the progression?"
 LOWER_LIMIT = 5
 UPPER_LIMIT = 15
@@ -22,7 +21,6 @@ def find_progression():
     index = progression.index(random_num_in_progression)
     progression[index] = '..'
     progression = " ".join(map(str, progression))
-    answer = integer(f"Question: {progression}\nYour answer: ")
-    return random_num_in_progression, answer
+    return str(random_num_in_progression), progression
 
 # game_progression()
