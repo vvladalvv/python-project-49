@@ -9,10 +9,9 @@ UPPER_LIMIT = 101
 def find_even_number():
     random_number = randint(LOWER_LIMIT, UPPER_LIMIT)
     question = f"{random_number}"
+    correct_answer = ANSWER_NO
     if random_number % 2 == 0:
         correct_answer = ANSWER_YES
-    else:
-        correct_answer = ANSWER_NO
     return correct_answer, question
 
 # game_even()
